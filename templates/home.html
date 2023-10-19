@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Movie Review Sentiment Prediction</title>
+    </head>
+    <body>
+        <h1><em>Customer Churn Prediction</em></h1>
+        <form method="post">
+            <label for="age">Age:</label><br>
+            <input type="number", name="age", id="age">
+            <br><br>
+            <label for="gender">Gender:</label><br>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br><br>
+            <label for="location">Location</label><br>
+            <select name="location" id="location">
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="New York">New York</option>
+                <option value="Miami">Miami</option>
+                <option value="Los Angeles">Los Angeles</option>
+            </select>
+            <br><br>
+            <label for="subscription_length_months">Subscription Length (Months)</label><br>
+            <input type="number" id="subscription_length_months" name="subscription_length_months">
+            <br><br>
+            <label for="monthly_bill">Monthly Bill</label><br>
+            <input type="number" step="0.01" min="0" name="monthly_bill" id="monthly_bill">
+            <br><br>
+            <label for="total_usage_gb">Total Usage (GB)</label><br>
+            <input type="number" name="total_usage_gb" id="total_usage_gb">
+            <button type="submit" name="submit">Check Sentiment</button>
+        </form>
+        <hr>
+        <p>
+            {% if result %}
+            Churn Prediction: {{ result.prediction }}
+            {% endif %}
+        </p>
+    </body>
+</html>
