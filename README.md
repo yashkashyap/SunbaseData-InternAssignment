@@ -9,5 +9,8 @@ The data is extremely even, with no outliers. The data is also very clean, with 
 ## Approach
 Initially, I tried creating new features and build a model on top of them but the performance was really poor. Later I used the oversampling technique (SMOTE) to generate new samples and somehow make the data more ready for prediction. This approach worked really well and I was able to achieve 0.90 accuracy on the test set. Thereafter, I selected features based on feature importance and correlation matrix and achieved an accuracy of 0.918 on the test set at last.
 
-## Conclusion
-The data is difficult to handle and understand but the oversampling helped me reach the final score.
+## How to run
+1. Clone the repository
+2. Run `pip install -r requirements.txt`
+3. Run `python app.py` to run the flask app
+4. Go to `http://127.0.0.1:5000/` to see the app running
